@@ -8,6 +8,14 @@
     <title>Crystals Collector!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+    <style>
+        body {
+            background-image: url("assets/images/Background.jpg");
+        }
+    </style>
 
 </head>
 
@@ -18,7 +26,8 @@
                 <div class="p-3 mb-2 bg-warning text-dark m-2">
                     <h1>Crystals Collector!</h1>
                 </div>
-                <div class="p-3 mb-2 bg-success text-white m-2">You will be given a random number at the start of the game.
+                <div class="p-3 mb-2 bg-success text-white m-2">You will be given a random number at the start of the
+                    game.
                     <br><br>
                     There are four crystals below. By clicking on a crystal you will add a specific amount of points to
                     your total score.
@@ -31,39 +40,37 @@
                     Each time when the game starts, the game will change the values of each crystal.
                 </div>
                 <div class="p-3 mb-2 bg-primary text-white m-2">
-                        Score
-                        <br>
-                        Wins:
-                        <br>
-                        Losses:
-                    </div>
+                    Score
+                    <br>
+                    Wins: <span id="winCount"></span>
+                    <br>
+                    Losses: <span id="lossCount"></span>
+                </div>
             </div>
             <div class="clearfix col-8">
-               <div class="row">
-                <img class="float-left m-2" src="assets/images/Crystal1.jpg" width="200px" height="200px">
-                <img class="float-left m-2" src="assets/images/Crystal2.jpg" width="200px" height="200px">
-                <img class="float-left m-2" src="assets/images/Crystal3.jpg" width="200px" height="200px">
-                <img class="float-left m-2" src="assets/images/Crystal4.jpg" width="200px" height="200px">
+                <div class="row">
+                    <img class="crystal float-left m-2" id="crystal1" src="assets/images/Crystal1.jpg" width="200px"
+                        height="200px">
+                    <img class="crystal float-left m-2" id="crystal2" src="assets/images/Crystal2.jpg" width="200px"
+                        height="200px">
+                    <img class="crystal float-left m-2" id="crystal3" src="assets/images/Crystal3.jpg" width="200px"
+                        height="200px">
+                    <img class="crystal float-left m-2" id="crystal4" src="assets/images/Crystal4.jpg" width="200px"
+                        height="200px">
+                </div>
+                <div class="row">
+                    <div class="p-3 mb-2 bg-danger text-white m-2">Target Number</div>
+                    <div class="p-3 mb-2 bg-info text-white m-2">Your Score</div>
+                </div>
+                <div class="row">
+                    <div class="target p-3 mb-2 bg-danger text-white m-2" id="target">0</div>
+                    <div class="score p-3 mb-2 bg-info text-white m-2" id="score">0</div>
+                </div>
+
             </div>
-                <div class="row">  
-            <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
-                <div class="p-3 mb-2 bg-info text-white">.bg-info</div>
-            </div>  
-                
-            </div>
-        
+
         </div>
     </div>
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
